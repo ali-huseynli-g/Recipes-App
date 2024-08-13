@@ -51,7 +51,7 @@ app.use(
   cors({
     origin: [
       "https://recipes-app-client-gamma.vercel.app",
-      "http://localhost:8080/api",
+      "http://localhost:3000/api",
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
