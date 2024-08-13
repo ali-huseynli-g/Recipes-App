@@ -43,6 +43,10 @@ let strategy = new JwtStrategy(jwtOptions, function (jwt_payload, next) {
 // tell passport to use our "strategy"
 passport.use(strategy);
 
+// add passport as application-level middleware
+app.use(passport.initialize());
+
+// app.use(cors());
 app.use(
   cors({
     origin: "https://recipes-app-client-gamma.vercel.app/",
@@ -50,11 +54,6 @@ app.use(
     credentials: true,
   })
 );
-
-// add passport as application-level middleware
-app.use(passport.initialize());
-
-app.use(cors());
 app.use(express.json());
 
 app.post("/api/register", (req, res) => {
