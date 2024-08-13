@@ -46,17 +46,12 @@ passport.use(strategy);
 // add passport as application-level middleware
 app.use(passport.initialize());
 
-app.use(cors());
-// app.use(
-//   cors({
-//     origin: [
-//       "https://recipes-app-client-gamma.vercel.app",
-//       "http://localhost:3000/api",
-//     ],
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     credentials: true,
-//   })
-// );
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://recipes-app-client-gamma.vercel.app",
+  })
+);
 app.use(express.json());
 
 app.post("/register", (req, res) => {
