@@ -46,20 +46,20 @@ passport.use(strategy);
 // add passport as application-level middleware
 app.use(passport.initialize());
 
-// app.use(cors());
-app.use(
-  cors({
-    origin: [
-      "https://recipes-app-client-gamma.vercel.app",
-      "http://localhost:3000/api",
-    ],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: [
+//       "https://recipes-app-client-gamma.vercel.app",
+//       "http://localhost:3000/api",
+//     ],
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 
-app.post("/api/register", (req, res) => {
+app.post("/register", (req, res) => {
   userService
     .registerUser(req.body)
     .then((msg) => {
@@ -70,7 +70,7 @@ app.post("/api/register", (req, res) => {
     });
 });
 
-app.post("/api/login", (req, res) => {
+app.post("/login", (req, res) => {
   userService
     .checkUser(req.body)
     .then((user) => {
@@ -89,7 +89,7 @@ app.post("/api/login", (req, res) => {
     });
 });
 
-app.post("/api/favorites", (req, res) => {
+app.post("/favorites", (req, res) => {
   const { url } = req.body;
 
   if (!url) {
@@ -104,7 +104,7 @@ app.post("/api/favorites", (req, res) => {
   }
 });
 
-app.get("/api/favorites", (req, res) => {
+app.get("/favorites", (req, res) => {
   try {
     userService.getFavorites().then((data) => res.json(data));
   } catch (error) {
@@ -112,7 +112,7 @@ app.get("/api/favorites", (req, res) => {
   }
 });
 
-app.delete("/api/favorites/:recipeLabel", async (req, res) => {
+app.delete("/favorites/:recipeLabel", async (req, res) => {
   try {
     const recipeLabel = req.params.recipeLabel;
     const deletedRecipe = userService.deleteFavorite(recipeLabel);
