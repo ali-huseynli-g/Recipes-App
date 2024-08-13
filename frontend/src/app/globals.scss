@@ -1,0 +1,93 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-size: cover;
+  height: 100vh;
+  background-color: #28294a;
+
+  // background-image: url("/background1.png");
+  background-repeat: no-repeat;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(27, 27, 83, 1) 35%,
+    rgba(24, 50, 104, 0.3) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  a {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+  }
+  div .dropdown-menu a {
+    color: var(--bs-dropdown-link-color) !important;
+  }
+}
+
+.card-transparent {
+  padding-bottom: 30px;
+  height: 120px;
+}
+
+select {
+  width: fit-content !important;
+  border-color: #bd8ce5 !important;
+  background: transparent !important;
+  color: white !important;
+}
+
+.glass {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.buttonLabel {
+  height: fit-content;
+}
+
+form {
+  input {
+    background-color: transparent !important;
+    color: white !important;
+    width: 280px !important;
+  }
+
+  input::placeholder {
+    color: white !important;
+  }
+
+  button {
+    color: white !important;
+    border-color: #bd8ce5 !important;
+    width: 50%;
+  }
+  button:hover {
+    background-color: darken(#bd8ce5, 10%) !important;
+  }
+}
+
+.customBtn {
+  background-color: transparent !important;
+  color: white !important;
+  border-color: #bd8ce5 !important;
+  width: 50%;
+}
+.customBtn:hover {
+  background-color: darken(#bd8ce5, 10%) !important;
+}
+div p {
+  margin: 0;
+}
