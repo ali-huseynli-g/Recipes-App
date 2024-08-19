@@ -1,11 +1,11 @@
+// @import "//frontend/node_modules/bootstrap/scss/bootstrap.scss";
 @import "~bootstrap/scss/bootstrap";
 
 body {
   background-size: cover;
-  height: 100vh;
-  background-color: #28294a;
+  // height: 100vh;
+  background-color: rgb(254, 223, 168);
 
-  // background-image: url("/background1.png");
   background-repeat: no-repeat;
 }
 
@@ -15,17 +15,35 @@ nav {
   right: 0;
   bottom: 0;
   padding: 10px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(27, 27, 83, 1) 35%,
-    rgba(24, 50, 104, 0.3) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: darken(rgb(254, 223, 168), 2%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  // background: rgb(0, 0, 0);
+  // background: linear-gradient(
+  //   0deg,
+  //   rgba(0, 0, 0, 0.8337928921568627) 0%,
+  //   rgba(254, 223, 168, 1) 43%,
+  //   rgba(254, 223, 168, 1) 100%
+  // );
+
+  // background: linear-gradient(
+  //   0deg,
+  //   rgba(163, 182, 211, 0.8477984943977591) 0%,
+  //   rgba(116, 136, 168, 1) 29%,
+  //   rgba(38, 65, 109, 1) 100%
+  // );
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(27, 27, 83, 1) 35%,
+  //   rgba(24, 50, 104, 0.3) 100%,
+  //   rgba(0, 212, 255, 1) 100%
+  // );
   a {
     --bs-text-opacity: 1;
-    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+    color: rgba(rgb(38, 65, 109), var(--bs-text-opacity)) !important;
+    // color: rgba(rgb(116, 136, 168), var(--bs-text-opacity)) !important;
+    // color: rgba(rgb(117, 167, 255), var(--bs-text-opacity)) !important;
   }
   div .dropdown-menu a {
     color: var(--bs-dropdown-link-color) !important;
@@ -46,7 +64,9 @@ select {
 
 .glass {
   width: 320px;
-  background: rgba(255, 255, 255, 0.2);
+  // background: rgba(255, 255, 255, 0.2);
+  // background: rgba(254, 223, 168, 0.6);
+  background: darken(rgba(254, 223, 168, 0.6), 2%);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -54,39 +74,44 @@ select {
   -webkit-backdrop-filter: blur(4px);
 }
 
-.buttonLabel {
-  height: fit-content;
-}
-
 form {
   input {
-    background-color: transparent !important;
-    color: white !important;
+    // background-color: transparent !important;
+    // color: #ffe2cf !important;
     width: 280px !important;
+    // background: rgba(254, 203, 168, 0.6) !important;
+    backdrop-filter: blur(4px);
   }
 
-  input::placeholder {
-    color: white !important;
+  input:focus {
+    // color: #ffe2cf !important;
+    border-color: #ffe2cf !important;
   }
 
   button {
-    color: white !important;
-    border-color: #bd8ce5 !important;
+    background-color: #a56337 !important;
+    // background-color: #352872 !important;
+    // background-color: #a58f37 !important;
+    // background-color: #7488a8 !important;
+    // background-color: #bab4d7 !important;
+    color: #ffe2cf !important;
+    border-color: #ffe2cf !important;
     width: 50%;
   }
   button:hover {
-    background-color: darken(#bd8ce5, 10%) !important;
+    background-color: darken(#fecba8, 10%) !important;
   }
 }
 
 .customBtn {
   background-color: transparent !important;
-  color: white !important;
-  border-color: #bd8ce5 !important;
+  color: #26416d !important;
+  border-color: #26416d !important;
   width: 50%;
+  height: fit-content;
 }
 .customBtn:hover {
-  background-color: darken(#bd8ce5, 10%) !important;
+  background-color: darken(#7488a8, 10%) !important;
 }
 div p {
   margin: 0;

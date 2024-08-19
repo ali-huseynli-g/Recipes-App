@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import NavBarCustom from "@/app/components/NavBarCustom";
+// import myImage2 from "../../public/bg2.jpg";
+import myImage3 from "../../public/bg3.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{ backgroundImage: `url(${myImage3.src})` }}>
         <NavBarCustom />
         {children}
       </body>

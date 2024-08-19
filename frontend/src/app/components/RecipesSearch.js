@@ -1122,7 +1122,7 @@ export default function RecipesSearch() {
                     </div>
 
                     <button
-                      className="mx-2 mt-3 customBtn btn buttonLabel"
+                      className="mx-2 mt-3 customBtn btn "
                       onClick={() => setupRecipe(index + 3 * (currentPage - 1))}
                       type="button"
                       data-bs-toggle="modal"
