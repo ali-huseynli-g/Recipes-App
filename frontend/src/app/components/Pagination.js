@@ -8,6 +8,7 @@ export default function RecipesPagination({
   setCurrentPage,
 }) {
   let items = [];
+
   for (
     let number = 1;
     number <= Math.ceil(totalRecipes / recipesPerPage);
@@ -16,6 +17,7 @@ export default function RecipesPagination({
     items.push(
       <Pagination.Item
         key={number}
+        className="paginationNumber"
         active={number === currentPage}
         onClick={() => {
           setCurrentPage(number);
@@ -33,12 +35,14 @@ export default function RecipesPagination({
           onClick={() => {
             setCurrentPage(1);
           }}
+          className="paginationNavigation"
           disabled={currentPage === 1}
         />
         <Pagination.Prev
           onClick={() => {
             setCurrentPage(currentPage - 1);
           }}
+          className="paginationNavigation"
           disabled={currentPage === 1}
         />
         {items}
@@ -46,12 +50,14 @@ export default function RecipesPagination({
           onClick={() => {
             setCurrentPage(currentPage + 1);
           }}
+          className="paginationNavigation"
           disabled={currentPage === Math.ceil(totalRecipes / recipesPerPage)}
         />
         <Pagination.Last
           onClick={() => {
             setCurrentPage(Math.ceil(totalRecipes / recipesPerPage));
           }}
+          className="paginationNavigation"
           disabled={currentPage === Math.ceil(totalRecipes / recipesPerPage)}
         />
       </Pagination>

@@ -3,7 +3,7 @@
 
 body {
   background-size: cover;
-  // height: 100vh;
+  height: max-content;
   background-color: rgb(254, 223, 168);
 
   background-repeat: no-repeat;
@@ -113,6 +113,31 @@ form {
 .customBtn:hover {
   background-color: darken(#7488a8, 10%) !important;
 }
+
+.paginationNumber a {
+  color: #a58f37;
+  background-color: #feeda8;
+  border-color: #a58f37;
+}
+
+.paginationNumber span {
+  background-color: #a58f37 !important;
+  border-color: #feeda8 !important;
+  color: #feeda8 !important;
+}
+
+.paginationNavigation a {
+  color: #a58f37 !important;
+  background-color: #feeda8 !important;
+  border-color: #a58f37 !important;
+}
+
+.paginationNavigation.disabled span {
+  background-color: #a58f37 !important;
+  border-color: #feeda8 !important;
+  color: #feeda8 !important;
+}
+
 div p {
   margin: 0;
 }
